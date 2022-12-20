@@ -1,18 +1,21 @@
 import Head from "next/head";
+import Link from "next/link";
 import Script from "next/script";
+import { getSortedPostsData } from "../lib/pages";
 import { attributes, react as HomeContent } from '../content/home.md';
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
+  let allPostsData = getSortedPostsData();
+
   return {
     props: {
-      allPostsData,
+      allPostsData: JSON.parse(JSON.stringify(allPostsData))
     },
   };
 }
 
 const Home = () => {
-  let { title, cats, extra } = attributes;
+  let { title, date} = attributes;
   return (
     <>
       <Head>
@@ -22,14 +25,17 @@ const Home = () => {
         <h1>{title}</h1>
         <HomeContent />
         <ul>
-          {cats.map((cat, k) => (
-            <li key={k}>
-              <h2>{cat.name}</h2>
-              <p>{cat.description}</p>
+        <ul className={utilStyles.list}>
+          {allPostsData.map(({ id, date, title }) => (
+            <li key={id}>
+              {/* Need to setup [id]pages for routes / pages */}
+              {/* maybe make some kinda structural design and start making that from scratch? */}
+                {/* <Link href={`/posts/${id}`}>{title}</Link> */}
             </li>
           ))}
         </ul>
-        <img src={extra} />
+        </ul>
+        
       </article>
     </>
   )
