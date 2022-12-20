@@ -8,5 +8,6 @@ module.exports = {
             }
         )
         return cfg;
-    }
+    },
+    generateBuildId: () =>'build-id'
 }
