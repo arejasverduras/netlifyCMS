@@ -6,6 +6,9 @@ public_folder: img
 collections:
   - name: "pages"
     label: "Pages"
+    folder: "content"
+    create: true
+    slug: "{{slug}}"
     files:
     - label: "Home"
       name: "home"
@@ -23,3 +26,10 @@ collections:
           fields:
             - { label: "Name", name: "name", widget: "string"}
             - { label: "Description", name: "description", widget: "text"}
+    - label: "New"
+      name: "new"
+      file: "content/new.md"
+      fields:  
+        - { label: "Title", name: "title", widget: "string"}
+        - { label: "Publish Date", name: "date", widget: "datetime" }
+        - { label: "Body", name: "body", widget: "markdown"}
