@@ -9,6 +9,10 @@ collections:
     folder: "content"
     create: true
     slug: "{{slug}}"
+    fields: 
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}
     files:
     - label: "Home"
       name: "home"
