@@ -9,7 +9,7 @@ import { attributes, react as HomeContent } from '../content/home.md';
 //   }
 // }
 
-const Home = () => {
+export const Home = () => {
   let { title, cats, extra } = attributes;
   return (
     <>
@@ -32,5 +32,3 @@ const Home = () => {
     </>
   )
 }
-
-export default Home;
