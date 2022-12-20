@@ -5,7 +5,7 @@ import { attributes, react as HomeContent } from '../content/home.md';
 
 export default class Home extends Component {
   render() {
-    let { title, cats } = attributes;
+    let { title, cats, extra } = attributes;
     return (
       <>
         <Head>
@@ -22,6 +22,7 @@ export default class Home extends Component {
               </li>
             ))}
           </ul>
+          <img src={extra} />
         </article>
       </>
     )
