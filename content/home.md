@@ -12,3 +12,5 @@ cats:
 Welcome to my awesome page about cats of the internet.
 
 This page is built by Michiel Roukens.
+
+![](img/michielportrait.jpg)
