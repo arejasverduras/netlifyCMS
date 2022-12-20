@@ -2,13 +2,6 @@ import Head from "next/head";
 import Script from "next/script";
 import { attributes, react as HomeContent } from '../content/home.md';
 
-// export class Home extends Component {
-//   render() {
-    
-    
-//   }
-// }
-
 const Home = () => {
   let { title, cats, extra } = attributes;
   return (
