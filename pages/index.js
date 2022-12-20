@@ -2,6 +2,15 @@ import Head from "next/head";
 import Script from "next/script";
 import { attributes, react as HomeContent } from '../content/home.md';
 
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData();
+  return {
+    props: {
+      allPostsData,
+    },
+  };
+}
+
 const Home = () => {
   let { title, cats, extra } = attributes;
   return (
