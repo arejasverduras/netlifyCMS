@@ -8,10 +8,6 @@ collections:
     label: "Pages"
     folder: "content"
     slug: "{{slug}}"
-    fields: 
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Body", name: "body", widget: "markdown"}
     files:
     - label: "Home"
       name: "home"
@@ -20,12 +16,12 @@ collections:
         - { label: "Title", name: "title", widget: "string"}
         - { label: "Publish Date", name: "date", widget: "datetime" }
         - { label: "Body", name: "body", widget: "markdown"}
-        # - label: 'Extra'
-        #   name: 'extra'
-        #   widget: 'image'
-        # - label: 'Cats'
-        #   name: "cats"
-        #   widget: list
-        #   fields:
-        #     - { label: "Name", name: "name", widget: "string"}
-        #     - { label: "Description", name: "description", widget: "text"}
+        - label: 'Extra'
+          name: 'extra'
+          widget: 'image'
+        - label: 'Cats'
+          name: "cats"
+          widget: list
+          fields:
+            - { label: "Name", name: "name", widget: "string"}
+            - { label: "Description", name: "description", widget: "text"}
